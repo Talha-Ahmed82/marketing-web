@@ -19,7 +19,7 @@ export default function BuiltSection() {
       <div className="absolute top-6 left-1/2 -translate-x-1/2 z-30 flex items-center justify-center">
         <div className="relative w-20 h-20 md:w-24 md:h-24">
           <img
-            src="/rounded-logo.png"
+            src="/rounded-logo.PNG"
             alt="circle-text"
             className="w-full h-full animate-spin-slow"
           />

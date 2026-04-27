@@ -24,7 +24,7 @@ export default function AboutSection() {
           {/* Image */}
           <div className="mt-8 rounded-2xl overflow-hidden">
             <img
-              src="/about-pic.png"
+              src="/about-pic.PNG"
               alt="design work"
               className="w-full h-full object-cover"
             />
