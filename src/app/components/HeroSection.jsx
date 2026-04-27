@@ -7,7 +7,7 @@ export default function HeroSection() {
       <nav className="flex items-center justify-between px-10 py-6">
         <div className="flex items-center gap-2">
           {/* <div className="w-8 h-8 bg-[#DE3B00] rounded-md"></div> */}
-          <img src="/bd-logo.png" alt="logo" className="w-8 h-8 object-contain" />
+          <img src="/bd-logo.PNG" alt="logo" className="w-8 h-8 object-contain" />
           <h1 className="font-semibold text-lg">Brooklyn Design</h1>
         </div>
 
