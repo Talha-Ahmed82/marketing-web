@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
@@ -23,26 +23,26 @@ export default function WorkSection() {
         {/* LEFT */}
         <div>
           <div className="inline-flex items-center gap-2 px-4 py-1 border rounded-full text-sm text-gray-600 mb-4">
-            <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+            <span className="w-2 h-2 bg-[#DE3B00] rounded-full"></span>
             Case Studies
           </div>
 
           <h2 className="text-4xl md:text-6xl font-bold leading-tight text-gray-700">
-            <span className="text-orange-600">Work</span> That
+            <span className="text-[#DE3B00]">Work</span> That
             <br />
-            Actually <span className="text-orange-600">Delivers.</span>
+            Actually <span className="text-[#DE3B00]">Delivers.</span>
           </h2>
         </div>
 
         {/* RIGHT */}
         <div className="max-w-md">
-          <p className="text-gray-600 text-sm md:text-base">
+          <p className="text-[#364153] text-sm md:text-base">
             Projects Are Built With Intention. We Focus On Clarity And Precision
             In Every Execution To Create Impactful Work Through Thoughtful Design
             And Strategy.
           </p>
 
-          <button className="mt-4 bg-orange-600 hover:bg-orange-700 text-white px-5 py-2 rounded-full flex items-center gap-2 text-sm">
+          <button className="mt-4 bg-[#DE3B00] hover:bg-orange-700 text-white px-5 py-2 rounded-full flex items-center gap-2 text-sm">
             View More <span>↗</span>
           </button>
         </div>
@@ -55,25 +55,13 @@ export default function WorkSection() {
         <div className="relative rounded-3xl overflow-hidden">
 
           {/* IMAGE */}
-          <img
+          <Image
             src={slides[active]}
             alt="case"
+            width={100}
+            height={100}
             className="w-full h-[250px] md:h-[420px] object-cover"
           />
-
-          {/* OVERLAY TEXT */}
-          {/* <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-black">
-            <h3 className="text-2xl md:text-5xl font-light">
-              World's Thinnest
-              <br />
-              Charger
-            </h3>
-
-            <div className="flex gap-10 mt-4 text-sm md:text-xl">
-              <span>Complete</span>
-              <span>Case Study</span>
-            </div>
-          </div> */}
         </div>
 
         {/* LEFT ARROW */}
@@ -103,7 +91,7 @@ export default function WorkSection() {
               key={i}
               onClick={() => setActive(i)}
               className={`w-2 h-2 rounded-full cursor-pointer ${
-                i === active ? "bg-orange-500" : "bg-gray-300"
+                i === active ? "bg-[#DE3B00]" : "bg-gray-300"
               }`}
             />
           ))}

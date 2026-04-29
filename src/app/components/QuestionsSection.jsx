@@ -48,25 +48,25 @@ export default function QuestionsSection() {
           {/* LEFT */}
           <div>
             <div className="inline-flex items-center gap-2 px-4 py-1 border rounded-full text-sm text-gray-600 mb-4">
-              <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+              <span className="w-2 h-2 bg-[#DE3B00] rounded-full"></span>
               Our Questions
             </div>
 
             <h2 className="text-4xl md:text-6xl font-bold leading-tight text-gray-700">
-              <span className="text-orange-600">The</span> Questions
+              <span className="text-[#DE3B00]">The</span> Questions
               <br />
-              <span className="text-orange-600">Most</span> Brands Avoid
+              <span className="text-[#DE3B00]">Most</span> Brands <span className="text-[#DE3B00]">Avoid</span>
             </h2>
           </div>
 
           {/* RIGHT */}
           <div className="max-w-md">
-            <p className="text-gray-600 text-sm md:text-base">
+            <p className="text-gray-800 text-sm md:text-base">
               We Don’t Jump Into Design. We Interrogate The Brand First, Because
               Clarity Beats Aesthetics Every Time.
             </p>
 
-            <button className="mt-4 bg-orange-600 hover:bg-orange-700 text-white px-5 py-2 rounded-full text-sm flex items-center gap-2">
+            <button className="mt-4 bg-[#DE3B00] hover:bg-[#c23000] text-white px-5 py-2 rounded-full text-sm flex items-center gap-2">
               View FAQs <span>↗</span>
             </button>
           </div>
@@ -80,11 +80,11 @@ export default function QuestionsSection() {
 
               {/* STEP TAG (top left) */}
               <div
-                className={`absolute -top-5 left-4 px-4 py-2 rounded-t-xl text-sm font-semibold z-10
+                className={`absolute -top-8 px-20 py-2 rounded-t-xl text-xl font-semibold z-10
                   ${
                     card.active
-                      ? "bg-orange-600 text-white"
-                      : "bg-gray-200 text-gray-700"
+                      ? "bg-[#DE3B00] text-white"
+                      : "bg-[#F8F8F8] text-gray-700"
                   }`}
               >
                 {card.step}
@@ -95,8 +95,8 @@ export default function QuestionsSection() {
                 className={`absolute top-0 left-4 right-0 h-full rounded-2xl 
                 ${
                   card.active
-                    ? "bg-orange-500/20"
-                    : "bg-gray-200"
+                    ? "bg-[#DE3B00]/20"
+                    : "bg-[#F8F8F8]"
                 }`}
               />
 
@@ -105,8 +105,8 @@ export default function QuestionsSection() {
                 className={`relative p-6 pt-10 rounded-2xl shadow-sm
                 ${
                   card.active
-                    ? "bg-orange-600 text-white"
-                    : "bg-[#eeeeee] text-gray-700"
+                    ? "bg-[#DE3B00] text-white"
+                    : "bg-[#F8F8F8] text-gray-700"
                 }`}
               >
                 {/* LABEL */}
@@ -126,8 +126,8 @@ export default function QuestionsSection() {
                       key={idx}
                       className={`border-b pb-2 ${
                         card.active
-                          ? "border-white/30"
-                          : "border-gray-300"
+                          ? "border-white"
+                          : "border-gray-600"
                       }`}
                     >
                       • {point}

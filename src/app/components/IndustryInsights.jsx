@@ -30,9 +30,9 @@ export default function IndustryInsights() {
     <section className="w-full bg-white py-14 md:py-20 overflow-hidden">
       <div className="max-w-[1400px] mx-auto mb-10 md:mb-14 px-4">
         <h2 className="text-center font-semibold text-3xl md:text-6xl tracking-tight">
-          <span className="text-orange-600">Our </span>
-          <span className="text-slate-700">Industry </span>
-          <span className="text-orange-600">Insights</span>
+          <span className="text-[#DE3B00]">Our </span>
+          <span className="text-[#374550]">Industry </span>
+          <span className="text-[#DE3B00]">Insights</span>
         </h2>
       </div>
 

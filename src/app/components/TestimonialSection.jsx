@@ -1,49 +1,57 @@
 "use client";
+import Image from "next/image";
 
 export default function TestimonialSection() {
   return (
-    <div className="w-full bg-white py-16 px-4 md:px-10">
+    <div className="w-full bg-white py-16">
 
-      {/* MAIN CONTAINER */}
-      <div className="relative max-w-7xl mx-auto rounded-2xl overflow-hidden">
-
-        {/* BACKGROUND IMAGE */}
+      {/* FULL WIDTH MAIN CONTAINER */}
+      <div
+        id="main"
+        className="relative w-full rounded-xl overflow-visible"
+      >
+        {/* BACKGROUND */}
         <div className="absolute inset-0">
-          <img
-            src="/build-bg-2.png" // your grid/bg image
+          <Image
+            width={1600}
+            height={900}
+            src="/build-bg-2.png"
             alt="bg"
             className="w-full h-full object-cover"
           />
         </div>
 
-        {/* DARK OVERLAY (for readability) */}
-        {/* <div className="absolute inset-0 bg-black/60" /> */}
-
         {/* CONTENT */}
-        <div className="relative z-10 grid md:grid-cols-2 gap-10 items-center p-6 md:p-12">
+        <div className="relative z-10 grid md:grid-cols-2 gap-0 items-center px-6 md:px-14 py-10 md:py-12">
 
-          {/* LEFT IMAGES */}
-          <div className="relative flex justify-center md:justify-start">
+          {/* LEFT IMAGE */}
+          <div className="relative flex justify-center overflow-visible">
 
-            {/* BACK IMAGE */}
-            <img
+            <Image
+              width={500}
+              height={500}
               src="/salt-pic.png"
               alt="charm-city-pic"
-              className="w-[220px] md:w-[280px] rounded-lg shadow-lg"
+              className="
+                w-[320px]
+                sm:w-[420px]
+                md:w-[520px]
+                lg:w-[420px]
+                h-[500px]
+                object-contain
+                drop-shadow-2xl
+                -mt-10 md:-mt-30
+              "
             />
-
-            {/* FRONT IMAGE */}
-            {/* <img
-              src="/charm-horizontal.png"
-              alt="charm city"
-              className="w-[200px] md:w-[260px] rounded-lg shadow-xl absolute bottom-[-20px] left-[40px] md:left-[80px]"
-            /> */}
           </div>
 
-          {/* RIGHT CONTENT */}
-          <div className="text-white text-center md:text-left">
 
-            <p className="text-sm text-gray-300 mb-2">Charm City</p>
+          {/* RIGHT CONTENT */}
+          <div className="text-white text-center md:text-left md:pl-0">
+
+            <p className="text-base mb-2">
+              Charm City
+            </p>
 
             <h2 className="text-2xl md:text-4xl font-semibold leading-tight">
               Great Find, I’d Use Them!
@@ -57,31 +65,21 @@ export default function TestimonialSection() {
               company requires assistance.
             </p>
 
-            {/* PROFILE ROW */}
-            <div className="flex flex-col md:flex-row items-center md:items-center gap-4 mt-6">
+            <div className="flex flex-col md:flex-row items-center gap-4 mt-6">
+              <div>
+                <p className="text-sm font-medium">
+                  Jeffrey Davidson
+                </p>
 
-              {/* USER */}
-              <div className="flex items-center gap-3">
-                {/* <img
-                  src="/user.png"
-                  alt="user"
-                  className="w-10 h-10 rounded-full"
-                /> */}
-
-                <div>
-                  <p className="text-sm font-medium">Jeffrey Davidson</p>
-                  <p className="text-xs text-gray-400">
-                    Founder Charm City
-                  </p>
-                </div>
+                <p className="text-xs text-gray-400">
+                  Founder Charm City
+                </p>
               </div>
 
-              {/* RATING */}
               <div className="flex text-yellow-400 text-sm">
                 ★★★★★
               </div>
 
-              {/* WATCH VIDEO */}
               <div className="flex items-center gap-2 text-sm text-gray-300 cursor-pointer">
                 <span className="border border-gray-400 rounded-full p-1 text-xs">
                   ▶
@@ -89,6 +87,7 @@ export default function TestimonialSection() {
                 Watch Video
               </div>
             </div>
+
           </div>
         </div>
       </div>

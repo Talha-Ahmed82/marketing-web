@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
@@ -9,21 +10,23 @@ export default function AboutSection() {
         <div>
           {/* About Button */}
           <button className="flex items-center gap-2 border border-gray-300 rounded-full px-4 py-1 text-sm text-gray-700 mb-6">
-            <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+            <span className="w-2 h-2 bg-[#DE3B00] rounded-full"></span>
             About Us
           </button>
 
           {/* Heading */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-gray-800">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-[#374550]">
             Built With{" "}
-            <span className="text-orange-500">Intent.</span>
+            <span className="text-[#DE3B00]">Intent.</span>
             <br />
-            <span className="text-orange-500">Not</span> Decoration.
+            <span className="text-[#DE3B00]">Not</span> Decoration.
           </h1>
 
           {/* Image */}
           <div className="mt-8 rounded-2xl overflow-hidden">
-            <img
+            <Image
+              width={800}
+              height={400}
               src="/about-pic.PNG"
               alt="design work"
               className="w-full h-full object-cover"
@@ -54,6 +57,10 @@ export default function AboutSection() {
             Matters.
           </p>
 
+           <p className="mt-4 text-gray-600 text-sm sm:text-base leading-relaxed">
+           What Sets Us Apart:
+          </p>
+
           {/* Features */}
           <div className="mt-6 grid sm:grid-cols-2 gap-4 text-sm sm:text-base">
             {[
@@ -63,14 +70,14 @@ export default function AboutSection() {
               "No Unnecessary Noise Ever",
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+                <span className="w-2 h-2 bg-[#DE3B00] rounded-full"></span>
                 <span className="text-gray-700">{item}</span>
               </div>
             ))}
           </div>
 
           {/* Button */}
-          <button className="mt-6 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full text-sm font-medium transition">
+          <button className="mt-6 bg-[#DE3B00] hover:bg-[#c22a00] text-white px-6 py-3 rounded-full text-sm font-medium transition">
             Read Full Brand Story →
           </button>
         </div>

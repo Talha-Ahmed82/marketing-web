@@ -1,7 +1,10 @@
+import React from "react";
+import Image from "next/image";
+
 export function AwardsSection() {
   return (
-    <div className="w-full bg-orange-600 py-6 px-4 md:px-10 lg:px-20">
-      <div className="flex flex-wrap items-center justify-between gap-6 text-white">
+    <div className="w-full bg-[#DE3B00] py-6 px-4 md:px-10 lg:px-20">
+      <div className="flex flex-wrap items-center justify-between gap-6 text-[#ECAE99]">
         {/* Left Title */}
         
 
@@ -10,11 +13,11 @@ export function AwardsSection() {
             <div className="text-sm md:text-lg font-semibold whitespace-nowrap">
           Awards & Recognition
         </div>
-          <img src="/banner-1.png" alt="Clutch" className="h-6 md:h-8 object-contain" />
-          <img src="/banner-2.png" alt="Google Cloud" className="h-6 md:h-8 object-contain" />
-          <img src="/banner-3.png" alt="Microsoft" className="h-6 md:h-8 object-contain" />
-          <img src="/banner-4.png" alt="AWS" className="h-6 md:h-8 object-contain" />
-          <img src="/banner-5.png" alt="Google Partner" className="h-6 md:h-8 object-contain" />
+          <Image src="/banner-1.png" alt="Clutch" width={100} height={50} className="h-6 md:h-12 object-contain" />
+          <Image src="/banner-2.png" alt="Google Cloud" width={100} height={50} className="h-6 md:h-12 object-contain" />
+          <Image src="/banner-3.png" alt="Microsoft" width={100} height={50} className="h-6 md:h-12 object-contain" />
+          <Image src="/banner-4.png" alt="AWS" width={100} height={50} className="h-6 md:h-12 object-contain" />
+          <Image src="/banner-5.png" alt="Google Partner" width={100} height={50} className="h-6 md:h-12 object-contain" />
         </div>
       </div>
     </div>

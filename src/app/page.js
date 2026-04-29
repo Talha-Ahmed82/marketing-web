@@ -12,10 +12,12 @@ import QuestionsSection from "./components/QuestionsSection";
 import IndustryInsights from "./components/IndustryInsights";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import TopBar from "./components/TopBar";
 
 export default function Home() {
   return (
     <>
+      <TopBar />
       <HeroSection />
       <AwardsSection />
       <AboutSection />

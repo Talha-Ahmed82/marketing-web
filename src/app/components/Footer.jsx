@@ -1,6 +1,8 @@
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
+import React from "react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -23,9 +25,11 @@ export default function Footer() {
           <div>
             <div className="mb-6 flex items-center gap-2">
                  <div>
-                <img
+                <Image
                   src="/bd-logo-remove.png"
                   alt="logo"
+                  width={80}
+                  height={80}
                   className="w-20 h-20 object-contain"
                 />
               </div>

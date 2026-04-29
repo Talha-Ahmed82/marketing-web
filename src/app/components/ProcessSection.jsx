@@ -1,28 +1,34 @@
 "use client";
+import React from "react";
+import Image from "next/image";
 
 export default function ProcessSection() {
   const steps = [
     {
       title: "Building The Foundation",
-      desc: "We Start By Getting Clear On Your Business, Your Goals, And Where Your Brand Stands Today. No Assumptions, Just Focused Insight To Define The Right Direction From The Start.",
+      step: "Step 01: Discovery & Clarity",
+      desc: "We start by getting clear on your business, your goals, and where your brand stands today. No assumptions, just focused insight to define the right direction from the start.",
       icon: "/card-pic1.png",
       bg: "/card-pic1.png",
     },
     {
       title: "Crafting Your Brand Story",
-      desc: "We Shape Your Brand’s Core, Positioning, Messaging, And Structure. This Is Where Everything Aligns, So Your Brand Doesn’t Just Look Good, It Makes Sense.",
+      step: "Step 02: Strategy & Positioning",
+      desc: "We shape your brand’s core, positioning, messaging, and structure. This is where everything aligns, so your brand doesn’t just look good, it makes sense.",
       icon: "/card-pic2.png",
       bg: "/card-pic2.png",
     },
     {
       title: "Bringing It To Life",
-      desc: "From Logo To Full Visual System, We Design With Purpose. Every Element Is Built To Be Consistent, Scalable, And Instantly Recognizable.",
+      step: "Step 03: Design & Identity",
+      desc: "From logo to full visual system, we design with purpose. Every element is built to be consistent, scalable, and instantly recognizable.",
       icon: "/card-pic3.png",
       bg: "/card-pic3.png",
     },
     {
       title: "Making It Real",
-      desc: "We Apply Your Brand Across Digital Touchpoints, Ensuring Everything Works Seamlessly. Clean Execution, Smooth Delivery, And Ready For Real-World Use.",
+      step: "Step 04: Execution & Launch",
+      desc: "We apply your brand across digital touchpoints, ensuring everything works seamlessly. Clean execution, smooth delivery, and ready for real-world use.",
       icon: "/card-pic4.png",
       bg: "/card-pic4.png",
     },
@@ -30,19 +36,19 @@ export default function ProcessSection() {
 
   return (
     <div className="w-full bg-white py-16 px-4 md:px-10">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 items-start">
 
         {/* LEFT CONTENT */}
         <div>
           <div className="inline-flex items-center gap-2 px-4 py-1 border rounded-full text-sm text-gray-600 mb-4">
-            <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+            <span className="w-2 h-2 bg-[#DE3B00] rounded-full"></span>
             Our Process
           </div>
 
           <h2 className="text-4xl md:text-6xl font-bold leading-tight text-gray-700">
-            <span className="text-orange-600">A Process</span> That
+            <span className="text-[#DE3B00]">A </span>Process <span className="text-[#DE3B00]">That</span>
             <br />
-            <span className="text-orange-600">Actually</span> Works.
+            <span className="text-[#DE3B00]">Actually</span> Works.
           </h2>
 
           <h3 className="mt-6 text-xl md:text-2xl text-gray-800">
@@ -57,7 +63,7 @@ export default function ProcessSection() {
             Define The Right Direction From The Start.
           </p>
 
-          <button className="mt-6 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-full text-sm md:text-base flex items-center gap-2">
+          <button className="mt-6 bg-[#DE3B00] hover:bg-orange-700 text-white px-6 py-3 rounded-full text-sm md:text-base flex items-center gap-2">
             Start Your Project <span>↗</span>
           </button>
         </div>
@@ -67,24 +73,32 @@ export default function ProcessSection() {
           {steps.map((step, i) => (
             <div
               key={i}
-              className="relative p-6 rounded-2xl bg-white border border-gray-200 overflow-hidden"
+              className="relative p-6 rounded-2xl bg-[#F8F8F8] border border-gray-200 overflow-hidden"
             >
               {/* LOW OPACITY BG IMAGE */}
-              <img
+              <Image
+                width={96}
+                height={96}
                 src={step.bg}
                 alt=""
                 className="absolute right-2 top-2 w-24 opacity-10 pointer-events-none"
               />
 
               {/* ICON */}
-              <img src={step.icon} alt="" className="w-10 mb-4" />
+              <Image
+                width={40}
+                height={40}
+                src={step.icon}
+                alt=""
+                className="w-10 mb-4"
+              />
 
               {/* STEP TITLE */}
-              <p className="text-xs text-gray-400 mb-1">
-                Step {i + 1 < 10 ? `0${i + 1}` : i + 1}
+              <p className="text-xs text-gray-500 mb-1">
+                {step.step}
               </p>
 
-              <h4 className="text-orange-600 font-semibold text-lg mb-2">
+              <h4 className="text-[#DE3B00] font-semibold text-lg mb-2">
                 {step.title}
               </h4>
 

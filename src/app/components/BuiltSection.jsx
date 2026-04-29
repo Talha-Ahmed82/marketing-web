@@ -1,24 +1,30 @@
 "use client";
+import React from "react";
+import Image from "next/image";
 
 export default function BuiltSection() {
   return (
     <div className="relative w-full bg-white overflow-hidden">
       {/* GRID OVERLAY (your image) */}
-      <div className="absolute inset-0 bg-[url('/build-bg.png')] bg-cover bg-center" />
+      <div id="bg-pic" className="absolute mt-20 inset-0 bg-[url('/build-bg.png')] bg-cover bg-center" />
 
       {/* BIG BACKGROUND LOGO */}
-      <div className="absolute right-[-120px] top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
-        <img
+      <div id="bg-logo" className="absolute -right-30 top-1/2 -translate-y-1/2 opacity-10 pointer-events-none">
+        <Image
+          width={750}
+          height={750}
           src="/bd-pic.png"
           alt="bg-logo"
-          className="w-[500px] md:w-[750px]"
+          className="w-125 md:w-187.5"
         />
       </div>
 
       {/* ROTATING BADGE ON TOP OF IMAGE */}
       <div className="absolute top-6 left-1/2 -translate-x-1/2 z-30 flex items-center justify-center">
-        <div className="relative w-20 h-20 md:w-24 md:h-24">
-          <img
+        <div className="relative w-20 h-20 md:w-32 md:h-24">
+          <Image
+            width={100}
+            height={100}
             src="/rounded-logo.PNG"
             alt="circle-text"
             className="w-full h-full animate-spin-slow"
@@ -33,7 +39,7 @@ export default function BuiltSection() {
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 pt-40 pb-28 md:pt-52 md:pb-36">
         {/* SMALL BADGE */}
         <div className="flex items-center gap-2 px-4 py-1 rounded-full border border-gray-500 bg-white/5 backdrop-blur text-white text-sm mb-6">
-          <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
+          <span className="w-2 h-2 bg-[#DE3B00] rounded-full"></span>
           Clarity wins.
         </div>
 
@@ -50,7 +56,7 @@ export default function BuiltSection() {
         </p>
 
         {/* CTA */}
-        <button className="mt-8 bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-full text-sm md:text-base flex items-center gap-2 transition">
+        <button className="mt-8 bg-[#DE3B00] hover:bg-orange-700 text-white px-6 py-3 rounded-full text-sm md:text-base flex items-center gap-2 transition">
           Book Your Free Strategy Call
           <span>↗</span>
         </button>
