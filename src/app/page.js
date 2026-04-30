@@ -1,5 +1,6 @@
+"use client";
 import HeroSection from "./components/HeroSection";
-import { AwardsSection } from "./components/Banners";
+import AwardsSection from "./components/Banners";
 import AboutSection from "./components/AboutSection";
 import ProofSection from "./components/ProofSection";
 import AttentionSection from "./components/AttentionSection";
@@ -18,7 +19,7 @@ export default function Home() {
   return (
     <>
       <TopBar />
-      <HeroSection />
+      {/* <HeroSection /> */}
       <AwardsSection />
       <AboutSection />
       <ProofSection />

@@ -1,25 +1,45 @@
-import React from "react";
+"use client";
 import Image from "next/image";
 
-export function AwardsSection() {
-  return (
-    <div className="w-full bg-[#DE3B00] py-6 px-4 md:px-10 lg:px-20">
-      <div className="flex flex-wrap items-center justify-between gap-6 text-[#ECAE99]">
-        {/* Left Title */}
-        
+export default function AwardsSection() {
+  const logos = [
+    "/banner-1.png",
+    "/banner-2.png",
+    "/banner-3.png",
+    "/banner-4.png",
+    "/banner-5.png",
+  ];
 
-        {/* Logos */}
-        <div className="flex flex-wrap items-center gap-8 md:gap-12 lg:gap-16 justify-center w-full md:w-auto">
-            <div className="text-sm md:text-lg font-semibold whitespace-nowrap">
-          Awards & Recognition
+  return (
+    <section className="w-full bg-[#DE3B00] overflow-hidden py-6 md:py-8">
+      <div className="marquee-wrapper">
+
+        <div className="marquee-track">
+          {[1,2].map((set) => (
+            <div
+              key={set}
+              className="flex items-center gap-10 md:gap-16 flex-shrink-0"
+            >
+              {/* Text only once per full logo group */}
+              <span className="text-[#ECAE99] font-semibold whitespace-nowrap text-sm md:text-xl">
+                Awards & Recognition
+              </span>
+
+              {logos.map((logo, i) => (
+                <Image
+                  key={i}
+                  src={logo}
+                  alt="award logo"
+                  width={160}
+                  height={60}
+                  className="h-8 md:h-12 w-auto object-contain"
+                />
+              ))}
+            </div>
+          ))}
         </div>
-          <Image src="/banner-1.png" alt="Clutch" width={100} height={50} className="h-6 md:h-12 object-contain" />
-          <Image src="/banner-2.png" alt="Google Cloud" width={100} height={50} className="h-6 md:h-12 object-contain" />
-          <Image src="/banner-3.png" alt="Microsoft" width={100} height={50} className="h-6 md:h-12 object-contain" />
-          <Image src="/banner-4.png" alt="AWS" width={100} height={50} className="h-6 md:h-12 object-contain" />
-          <Image src="/banner-5.png" alt="Google Partner" width={100} height={50} className="h-6 md:h-12 object-contain" />
-        </div>
+
       </div>
-    </div>
+    </section>
   );
 }

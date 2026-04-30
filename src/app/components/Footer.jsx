@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {/* Left Brand */}
           <div>
-            <div className="mb-6 flex items-center gap-2">
+            <div className="mb-6 flex items-center gap-1">
                  <div>
                 <Image
                   src="/bd-logo-remove.png"
@@ -34,7 +34,7 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold leading-none">
+                <h2 className="text-3xl md:text-2xl font-medium leading-none">
                   {" "}
                   Brooklyn Design
                 </h2>

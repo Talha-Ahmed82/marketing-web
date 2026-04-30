@@ -1,4 +1,20 @@
+import { motion } from "framer-motion";
+
 export default function ContactSection() {
+  const fadeUp = {
+    hidden: {
+      opacity: 0,
+      y: 70,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeOut",
+      },
+    },
+  };
   const services = [
     "Logo Design",
     "Website Design",
@@ -12,21 +28,28 @@ export default function ContactSection() {
 
   return (
     <section className="w-full bg-white py-14 md:py-24">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="grid lg:grid-cols-2 gap-14 items-center">
+      <motion.div variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }} className="max-w-7xl mx-auto px-6 lg:px-10">
+        <motion.div  variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }} className="grid lg:grid-cols-2 gap-14 items-center">
 
           {/* Left Content */}
-          <div>
+          <motion.div variants={fadeUp}
+          transition={{ delay: 0.2 }}>
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 border border-gray-600 rounded-full px-4 py-2 mb-8 bg-white">
+            <motion.div className="inline-flex items-center gap-2 border border-gray-600 rounded-full px-4 py-2 mb-8 bg-white">
               <span className="w-2.5 h-2.5 bg-[#DE3B00] rounded-full"></span>
               <span className="text-sm font-medium text-gray-700">
                 Get in Touch
               </span>
-            </div>
+            </motion.div>
 
             {/* Heading */}
-            <h2 className="font-semibold leading-[1.02] tracking-tight text-[52px] md:text-[76px] lg:text-[78px]">
+            <h2 className="font-medium leading-[1.02] tracking-tight text-[52px] md:text-[76px] lg:text-7xl">
               <span className="text-[#DE3B00]">Let’s</span>{" "}
               <span className="text-[#374550]">Build</span>
               <br />
@@ -48,13 +71,14 @@ export default function ContactSection() {
             <button className="mt-8 bg-[#DE3B00] hover:bg-[#c23000] transition text-white rounded-full px-8 py-4 font-medium shadow-lg">
               Start the Conversation ↗
             </button>
-          </div>
+          </motion.div>
 
           {/* Form Side */}
-          <div className="bg-transparent w-full">
+          <motion.div variants={fadeUp}
+          transition={{ delay: 0.2 }} className="bg-transparent w-full">
             <form className="space-y-4">
 
-              <div className="grid md:grid-cols-2 gap-4">
+              <motion.div className="grid md:grid-cols-2 gap-4">
                 <input
                   type="text"
                   placeholder="Full Name"
@@ -66,9 +90,9 @@ export default function ContactSection() {
                   placeholder="Email"
                   className="w-full text-gray-800 rounded-md border border-gray-400 bg-white px-4 py-3 outline-none focus:border-orange-500"
                 />
-              </div>
+              </motion.div>
 
-              <div className="grid md:grid-cols-2 gap-4">
+              <motion.div className="grid md:grid-cols-2 gap-4">
                 <input
                   type="text"
                   placeholder="Phone Number"
@@ -81,7 +105,7 @@ export default function ContactSection() {
                   <option>$5k - $10k</option>
                   <option>$10k+</option>
                 </select>
-              </div>
+              </motion.div>
 
               <textarea
                 rows="4"
@@ -90,12 +114,12 @@ export default function ContactSection() {
               ></textarea>
 
               {/* Services */}
-              <div className="pt-2">
+              <motion.div className="pt-2">
                 <h4 className="font-semibold text-lg text-gray-800 mb-4">
                   How can we Help you?
                 </h4>
 
-                <div className="flex flex-wrap gap-3">
+                <motion.div className="flex flex-wrap gap-3">
                   {services.map((item,index)=>(
                     <button
                       type="button"
@@ -105,24 +129,24 @@ export default function ContactSection() {
                       {item}
                     </button>
                   ))}
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
 
               {/* Fake Captcha */}
-              <div className="pt-4">
-                <div className="w-full max-w-[320px] bg-white border border-gray-300 rounded-md p-4 flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 border border-gray-500"></div>
+              <motion.div className="pt-4">
+                <motion.div className="w-full max-w-[320px] bg-white border border-gray-300 rounded-md p-4 flex items-center justify-between">
+                  <motion.div className="flex items-center gap-3">
+                    <motion.div className="w-5 h-5 border border-gray-500"></motion.div>
                     <span className="text-sm text-gray-700">
                       I’m not a robot
                     </span>
-                  </div>
+                  </motion.div>
 
-                  <div className="text-xs text-blue-600 font-semibold">
+                  <motion.div className="text-xs text-blue-600 font-semibold">
                     reCAPTCHA
-                  </div>
-                </div>
-              </div>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
 
               <button
                 className="mt-4 bg-orange-600 hover:bg-orange-700 transition text-white rounded-full px-8 py-3 font-semibold shadow-md"
@@ -131,10 +155,10 @@ export default function ContactSection() {
               </button>
 
             </form>
-          </div>
+          </motion.div>
 
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

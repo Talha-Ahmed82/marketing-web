@@ -1,8 +1,23 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import {motion} from "framer-motion"
 
 export default function ProcessSection() {
+  const fadeUp = {
+    hidden: {
+      opacity: 0,
+      y: 70,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeOut",
+      },
+    },
+  };
   const steps = [
     {
       title: "Building The Foundation",
@@ -35,17 +50,21 @@ export default function ProcessSection() {
   ];
 
   return (
-    <div className="w-full bg-white py-16 px-4 md:px-10">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 items-start">
+    <motion.div className="w-full bg-white py-16 px-4 md:px-10">
+      <motion.div variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }} className="max-w-6xl mx-auto grid md:grid-cols-2 items-start">
 
         {/* LEFT CONTENT */}
-        <div>
-          <div className="inline-flex items-center gap-2 px-4 py-1 border rounded-full text-sm text-gray-600 mb-4">
+        <motion.div variants={fadeUp}
+          transition={{ delay: 0.2 }}>
+          <motion.div className="inline-flex items-center gap-2 px-4 py-1 border rounded-full text-sm text-gray-600 mb-4">
             <span className="w-2 h-2 bg-[#DE3B00] rounded-full"></span>
             Our Process
-          </div>
+          </motion.div>
 
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight text-gray-700">
+          <h2 className="text-4xl md:text-6xl font-medium leading-tight text-gray-700">
             <span className="text-[#DE3B00]">A </span>Process <span className="text-[#DE3B00]">That</span>
             <br />
             <span className="text-[#DE3B00]">Actually</span> Works.
@@ -66,12 +85,17 @@ export default function ProcessSection() {
           <button className="mt-6 bg-[#DE3B00] hover:bg-orange-700 text-white px-6 py-3 rounded-full text-sm md:text-base flex items-center gap-2">
             Start Your Project <span>↗</span>
           </button>
-        </div>
+        </motion.div>
 
         {/* RIGHT CARDS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <motion.div variants={fadeUp}
+          transition={{ delay: 0.35 }} className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {steps.map((step, i) => (
-            <div
+            <motion.div
+            initial={{opacity:0, scale:0.92}}
+            whileInView={{opacity:1, scale:1}}
+            viewport={{once:true}}
+            transition={{duration:1, delay:0.4}}
               key={i}
               className="relative p-6 rounded-2xl bg-[#F8F8F8] border border-gray-200 overflow-hidden"
             >
@@ -105,10 +129,10 @@ export default function ProcessSection() {
               <p className="text-gray-600 text-sm leading-relaxed">
                 {step.desc}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 }

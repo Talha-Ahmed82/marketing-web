@@ -1,6 +1,21 @@
 "use client";
+import { motion } from "framer-motion";
 
 export default function QuestionsSection() {
+  const fadeUp = {
+    hidden: {
+      opacity: 0,
+      y: 70,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeOut",
+      },
+    },
+  };
   const cards = [
     {
       step: "01",
@@ -39,28 +54,43 @@ export default function QuestionsSection() {
   ];
 
   return (
-    <div className="w-full bg-white py-16 px-4 md:px-10">
-      <div className="max-w-7xl mx-auto">
-
+    <motion.div className="w-full bg-white py-16 px-4 md:px-10">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="max-w-7xl mx-auto"
+      >
         {/* TOP */}
-        <div className="flex flex-col md:flex-row justify-between gap-8 mb-12">
-
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="flex flex-col md:flex-row justify-between gap-8 mb-12"
+        >
           {/* LEFT */}
-          <div>
-            <div className="inline-flex items-center gap-2 px-4 py-1 border rounded-full text-sm text-gray-600 mb-4">
+          <motion.div variants={fadeUp} transition={{ delay: 0.2 }}>
+            <motion.div className="inline-flex items-center gap-2 px-4 py-1 border rounded-full text-sm text-gray-600 mb-4">
               <span className="w-2 h-2 bg-[#DE3B00] rounded-full"></span>
               Our Questions
-            </div>
+            </motion.div>
 
-            <h2 className="text-4xl md:text-6xl font-bold leading-tight text-gray-700">
+            <h2 className="text-4xl md:text-6xl font-medium leading-tight text-gray-700">
               <span className="text-[#DE3B00]">The</span> Questions
               <br />
-              <span className="text-[#DE3B00]">Most</span> Brands <span className="text-[#DE3B00]">Avoid</span>
+              <span className="text-[#DE3B00]">Most</span> Brands{" "}
+              <span className="text-[#DE3B00]">Avoid</span>
             </h2>
-          </div>
+          </motion.div>
 
           {/* RIGHT */}
-          <div className="max-w-md">
+          <motion.div
+            variants={fadeUp}
+            transition={{ delay: 0.35 }}
+            className="max-w-md"
+          >
             <p className="text-gray-800 text-sm md:text-base">
               We Don’t Jump Into Design. We Interrogate The Brand First, Because
               Clarity Beats Aesthetics Every Time.
@@ -69,17 +99,26 @@ export default function QuestionsSection() {
             <button className="mt-4 bg-[#DE3B00] hover:bg-[#c23000] text-white px-5 py-2 rounded-full text-sm flex items-center gap-2">
               View FAQs <span>↗</span>
             </button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* CARDS */}
-        <div className="grid md:grid-cols-3 gap-6">
-
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="grid md:grid-cols-3 gap-6"
+        >
           {cards.map((card, i) => (
-            <div key={i} className="relative">
-
+            <motion.div
+              variants={fadeUp}
+              transition={{ delay: 0.2 }}
+              key={i}
+              className="relative"
+            >
               {/* STEP TAG (top left) */}
-              <div
+              <motion.div
                 className={`absolute -top-8 px-20 py-2 rounded-t-xl text-xl font-semibold z-10
                   ${
                     card.active
@@ -88,20 +127,16 @@ export default function QuestionsSection() {
                   }`}
               >
                 {card.step}
-              </div>
+              </motion.div>
 
               {/* BACK LAYER (for stepped top effect) */}
-              <div
+              <motion.div
                 className={`absolute top-0 left-4 right-0 h-full rounded-2xl 
-                ${
-                  card.active
-                    ? "bg-[#DE3B00]/20"
-                    : "bg-[#F8F8F8]"
-                }`}
+                ${card.active ? "bg-[#DE3B00]/20" : "bg-[#F8F8F8]"}`}
               />
 
               {/* MAIN CARD */}
-              <div
+              <motion.div
                 className={`relative p-6 pt-10 rounded-2xl shadow-sm
                 ${
                   card.active
@@ -125,20 +160,18 @@ export default function QuestionsSection() {
                     <li
                       key={idx}
                       className={`border-b pb-2 ${
-                        card.active
-                          ? "border-white"
-                          : "border-gray-600"
+                        card.active ? "border-white" : "border-gray-600"
                       }`}
                     >
                       • {point}
                     </li>
                   ))}
                 </ul>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 }

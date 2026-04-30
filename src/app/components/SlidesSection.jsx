@@ -2,67 +2,92 @@
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function WorkSection() {
   const [active, setActive] = useState(2);
 
+  const fadeUp = {
+    hidden: {
+      opacity: 0,
+      y: 70,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeOut",
+      },
+    },
+  };
+
   const slides = [
-    "/banner-bg.png",
-    "/banner-bg.png",
-     "/banner-bg.png",
-     "/banner-bg.png",
-    "/banner-bg.png",
+    "/banner-image.png",
+    "/banner-image.png",
+    "/banner-image.png",
+    "/banner-image.png",
+    "/banner-image.png",
   ];
 
   return (
-    <div className="w-full bg-white py-16 px-4 md:px-10">
-
+    <motion.div className="w-full bg-white py-16 px-4 md:px-10">
       {/* TOP SECTION */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
-
+      <motion.div  variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }} className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-8">
         {/* LEFT */}
-        <div>
-          <div className="inline-flex items-center gap-2 px-4 py-1 border rounded-full text-sm text-gray-600 mb-4">
+        <motion.div  variants={fadeUp}
+          transition={{ delay: 0.2 }}>
+          <motion.div  variants={fadeUp}
+          transition={{ delay: 0.2 }} className="inline-flex items-center gap-2 px-4 py-1 border rounded-full text-sm text-gray-600 mb-4">
             <span className="w-2 h-2 bg-[#DE3B00] rounded-full"></span>
             Case Studies
-          </div>
+          </motion.div>
 
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight text-gray-700">
+          <h2  className="text-4xl md:text-6xl font-medium leading-tight text-gray-700">
             <span className="text-[#DE3B00]">Work</span> That
             <br />
             Actually <span className="text-[#DE3B00]">Delivers.</span>
           </h2>
-        </div>
+        </motion.div>
 
         {/* RIGHT */}
-        <div className="max-w-md">
+        <motion.div variants={fadeUp}
+          transition={{ delay: 0.35 }} className="max-w-md">
           <p className="text-[#364153] text-sm md:text-base">
             Projects Are Built With Intention. We Focus On Clarity And Precision
-            In Every Execution To Create Impactful Work Through Thoughtful Design
-            And Strategy.
+            In Every Execution To Create Impactful Work Through Thoughtful
+            Design And Strategy.
           </p>
 
           <button className="mt-4 bg-[#DE3B00] hover:bg-orange-700 text-white px-5 py-2 rounded-full flex items-center gap-2 text-sm">
             View More <span>↗</span>
           </button>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* SLIDER */}
-      <div className="relative max-w-7xl mx-auto mt-12">
-
+      <motion.div variants={fadeUp}
+          transition={{ delay: 0.35 }} className="relative max-w-7xl mx-auto mt-12">
         {/* CARD */}
-        <div className="relative rounded-3xl overflow-hidden">
-
+        <motion.div  initial={{opacity:0, scale:0.92}}
+            whileInView={{opacity:1, scale:1}}
+            viewport={{once:true}}
+            transition={{duration:1, delay:0.4}} className="relative rounded-3xl overflow-hidden h-[250px] md:h-[420px]">
           {/* IMAGE */}
           <Image
             src={slides[active]}
             alt="case"
-            width={100}
-            height={100}
-            className="w-full h-[250px] md:h-[420px] object-cover"
+            fill
+            priority
+            quality={100}
+            unoptimized
+            sizes="100vw"
+            className="object-cover"
           />
-        </div>
+        </motion.div>
 
         {/* LEFT ARROW */}
         <button
@@ -85,9 +110,9 @@ export default function WorkSection() {
         </button>
 
         {/* DOTS */}
-        <div className="flex justify-center gap-2 mt-6">
+        <motion.div className="flex justify-center gap-2 mt-6">
           {slides.map((_, i) => (
-            <div
+            <motion.div
               key={i}
               onClick={() => setActive(i)}
               className={`w-2 h-2 rounded-full cursor-pointer ${
@@ -95,8 +120,8 @@ export default function WorkSection() {
               }`}
             />
           ))}
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 }
