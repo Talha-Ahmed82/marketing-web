@@ -110,31 +110,31 @@ export default function AttentionSection() {
       <div className="relative max-w-7xl mx-auto px-4 md:px-10 pt-16 md:pt-10">
 
         {/* TOP CONTENT */}
-        <div className="grid lg:grid-cols-2 gap-10 items-start">
+        <div className="grid md:grid-cols-2 gap-10 items-start">
 
           {/* LEFT HEADING */}
           <motion.h1
-            initial="hidden"
-            whileInView="visible"
-            viewport={{once:true, amount:.2}}
-            variants={fadeUp}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-medium leading-tight text-gray-700"
+            // initial="hidden"
+            // whileInView="visible"
+            // viewport={{once:true, amount:.2}}
+            // variants={fadeUp}
+            className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl font-medium leading-tight text-gray-700"
           >
             Built To{" "}
-            <span className="text-[#DE3B00]">Hold</span>
-            <br />
+            <span className="text-[#DE3B00]">Hold </span>
+            <br className="hidden md:block" />
             <span className="text-[#DE3B00]">Attention.</span>
           </motion.h1>
 
 
           {/* RIGHT TEXT */}
           <motion.div
-            initial={{opacity:0,x:60}}
-            whileInView={{opacity:1,x:0}}
-            viewport={{once:true}}
-            transition={{duration:1,delay:.2}}
+            // initial={{opacity:0,x:60}}
+            // whileInView={{opacity:1,x:0}}
+            // viewport={{once:true}}
+            // transition={{duration:1,delay:.2}}
           >
-            <p className="text-gray-800 text-sm sm:text-base leading-relaxed max-w-lg">
+            <p className="text-gray-800 -mt-6 md:mt-0 text-sm sm:text-base leading-relaxed md:max-w-lg">
               Getting Noticed Is Easy. Staying Relevant Is The Real Challenge.
               We Design Brands And Digital Experiences That Don’t Just Attract
               Attention, They Keep It. Structured, Intentional, And Built To
@@ -142,10 +142,10 @@ export default function AttentionSection() {
             </p>
 
             <motion.button
-              initial={{opacity:0,y:30}}
-              whileInView={{opacity:1,y:0}}
-              viewport={{once:true}}
-              transition={{delay:.45}}
+              // initial={{opacity:0,y:30}}
+              // whileInView={{opacity:1,y:0}}
+              // viewport={{once:true}}
+              // transition={{delay:.45}}
               className="mt-6 bg-[#DE3B00] hover:bg-[#c03500] text-white px-6 py-3 rounded-full text-sm font-medium transition"
             >
               Book a Free Strategy Call →
@@ -157,30 +157,30 @@ export default function AttentionSection() {
 
         {/* CENTER IMAGE */}
         <motion.div
-          initial={{opacity:0, scale:.85, y:50}}
-          whileInView={{opacity:1, scale:1, y:0}}
-          viewport={{once:true}}
-          transition={{
-            duration:1.1,
-            delay:.25
-          }}
+          // initial={{opacity:0, scale:.85, y:50}}
+          // whileInView={{opacity:1, scale:1, y:0}}
+          // viewport={{once:true}}
+          // transition={{
+          //   duration:1.1,
+          //   delay:.25
+          // }}
           className="relative -mt-10 flex justify-center"
         >
           <motion.div
-            animate={{
-              y:[0,-10,0]
-            }}
-            transition={{
-              duration:4,
-              repeat:Infinity
-            }}
+            // animate={{
+            //   y:[0,-10,0]
+            // }}
+            // transition={{
+            //   duration:4,
+            //   repeat:Infinity
+            // }}
           >
             <Image
               width={600}
               height={400}
               src="/laptop-pic.png"
               alt="laptop mockup"
-              className="w-[280px] sm:w-[400px] md:w-[550px] lg:w-[500px] object-contain drop-shadow-2xl"
+              className="w-[280px] sm:w-[300px] mt-10 md:mt-0 md:w-[550px] lg:w-[500px] object-contain drop-shadow-2xl"
             />
           </motion.div>
         </motion.div>
@@ -191,10 +191,10 @@ export default function AttentionSection() {
 
           {/* LEFT */}
           <motion.h2
-            initial={{opacity:0,x:-60}}
-            whileInView={{opacity:1,x:0}}
-            viewport={{once:true}}
-            transition={{duration:1}}
+            // initial={{opacity:0,x:-60}}
+            // whileInView={{opacity:1,x:0}}
+            // viewport={{once:true}}
+            // transition={{duration:1}}
             className="text-4xl sm:text-5xl md:text-6xl font-medium text-gray-700"
           >
             Our{" "}
@@ -204,11 +204,11 @@ export default function AttentionSection() {
 
           {/* RIGHT */}
           <motion.p
-            initial={{opacity:0,x:60}}
-            whileInView={{opacity:1,x:0}}
-            viewport={{once:true}}
-            transition={{duration:1, delay:.2}}
-            className="text-gray-800 text-sm sm:text-base leading-relaxed max-w-lg"
+            // initial={{opacity:0,x:60}}
+            // whileInView={{opacity:1,x:0}}
+            // viewport={{once:true}}
+            // transition={{duration:1, delay:.2}}
+            className="text-gray-800 text-sm sm:text-base leading-relaxed md:max-w-lg"
           >
             We Don’t Offer Disconnected Services, We Build Complete Brand Systems
             That Work. From Identity To Digital, Everything Is Designed To Be

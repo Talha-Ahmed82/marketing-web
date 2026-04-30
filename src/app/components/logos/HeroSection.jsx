@@ -121,31 +121,26 @@ export default function HeroSection() {
     >
       <div className="inline-flex items-center gap-2 border px-3 sm:px-4 py-1 rounded-full text-[10px] sm:text-xs mb-4 sm:mb-6">
         <span className="w-2 h-2 bg-[#DE3B00] rounded-full"></span>
-        Built loud. Designed sharp.
+        Logo Design.
       </div>
 
       {/* Heading */}
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl ubuntu-bold font-medium text-[#374550] leading-tight">
-        Not For{" "}
-        <span className="text-[#DE3B00]">
-          Brands
-        </span>
+        <span className="text-[#DE3B00]">Logos</span>  With{" "}
         <br />
-        That <span className="text-[#DE3B00]">Play It Safe.</span>
+        Meanings
       </h1>
 
       <p className="mt-1 md:mt-3 text-base sm:text-lg md:text-xl font-bold text-gray-600">
-        From Brooklyn, Where Average Doesn’t Survive.
+        Not Just Something That Looks Good On A Screen.
       </p>
 
       <p className="mt-1 md:mt-3 text-xs sm:text-sm text-gray-700 leading-relaxed">
-        Brooklyn Designs Is Where Bold Ideas Get Structure. We Build Brands
-        That Carry Weight And Digital Experiences That Actually Perform. No
-        Trends, No Filler, Just Work That Earns Attention And Keeps It.
+       We Design Marks That Carry Weight, Build Recognition, and Hold Up Everywhere Your Brand Shows Up
       </p>
 
       <button className="mt-3 md:mt-6 bg-[#DE3B00] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm hover:bg-[#DE3B00] transition">
-        Book a Free Strategy Call ↗
+        Get Started ↗
       </button>
 
       {/* Reviews */}
@@ -168,20 +163,20 @@ export default function HeroSection() {
       transition={{ duration: 1.1, delay: 0.4 }}
     >
       <div className="flex items-center justify-center">
-        <Image
+        {/* <Image
           width={100}
           height={100}
           src="/rounded-logo.PNG"
           alt="circle-text"
           className="w-[18%] ml-10 sm:ml-0 sm:w-[20%] lg:w-[20%] -mt-40 md:-mt-96 h-auto animate-spin-slow"
-        />
+        /> */}
 
         <motion.div
           animate={{ y: [0, -12, 0] }}
           transition={{ duration: 4, repeat: Infinity }}
         >
           <Image
-            src="/bd-pic.png"
+            src="/logos/logos-images.png"
             alt="BD"
             width={300}
             height={300}

@@ -116,7 +116,7 @@ export default function ProofSection() {
             whileInView={{opacity:1,x:0}}
             viewport={{once:true}}
             transition={{duration:1,delay:.2}}
-            className="text-white sm:text-black md:text-blue-600 lg:text-green-500 xl:text-white z-10"
+            className="text-white z-10"
           >
             <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold leading-snug">
               We Don’t Rely On Buzzwords Or Badges. The Work Speaks, And The

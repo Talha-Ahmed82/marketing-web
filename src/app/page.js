@@ -18,7 +18,7 @@ import TopBar from "./components/TopBar";
 export default function Home() {
   return (
     <>
-      <TopBar />
+      {/* <TopBar /> */}
       <HeroSection />
       <AwardsSection />
       <AboutSection />
@@ -32,7 +32,7 @@ export default function Home() {
       <QuestionsSection />
      <IndustryInsights />
      <ContactSection />
-     <Footer />
+     {/* <Footer /> */}
     </>
   );
 }

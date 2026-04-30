@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Poppins, Inter } from "next/font/google";
 import { Ubuntu } from "next/font/google";
+import TopBar from "./components/TopBar";
+import Footer from "./components/Footer";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -40,7 +42,11 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} bg-white ${poppins.variable} ${geistMono.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className={`min-h-full ${ubuntu.className} bg-white flex flex-col`}>{children}</body>
+      <body className={`min-h-full ${ubuntu.className} bg-white flex flex-col`}>
+        <TopBar />
+        {children}
+        <Footer />
+        </body>
     </html>
   );
 }

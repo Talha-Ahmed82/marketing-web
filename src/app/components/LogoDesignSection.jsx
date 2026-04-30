@@ -154,12 +154,12 @@ export default function LogoDesignSection() {
         {/* LEFT CONTENT */}
         <motion.div  variants={fadeUp}
           transition={{ delay: 0.2 }} className="flex-1 text-center md:text-left">
-          <h2 className="text-3xl md:text-6xl font-medium text-[#364153]">
+          <h2 className="text-3xl lg:text-5xl xl:text-6xl font-medium text-[#364153]">
             Logo{" "}
             <span className="text-[#DE3B00]">{slides[active].highlight}</span>
           </h2>
 
-          <p className="text-gray-800 mt-4 text-sm md:text-base max-w-md">
+          <p className="text-gray-800 sm:text-red-400 md:text-blue-600 lg:text-green-500 xl:text-white mt-4 text-sm md:text-base lg:max-w-md">
             {slides[active].description}
           </p>
 
