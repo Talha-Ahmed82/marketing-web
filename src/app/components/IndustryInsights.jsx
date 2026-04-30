@@ -64,17 +64,17 @@ export default function IndustryInsights() {
 
       {/* Infinite Moving Slider */}
       <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        // variants={fadeUp}
+        // initial="hidden"
+        // whileInView="visible"
+        // viewport={{ once: true, amount: 0.2 }}
         className="marquee-wrapper"
       >
         <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          // variants={fadeUp}
+          // initial="hidden"
+          // whileInView="visible"
+          // viewport={{ once: true, amount: 0.2 }}
           className="marquee-track"
         >
           {[...cards, ...cards].map((item, index) => (

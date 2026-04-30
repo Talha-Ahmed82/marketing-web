@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <TopBar />
-      {/* <HeroSection /> */}
+      <HeroSection />
       <AwardsSection />
       <AboutSection />
       <ProofSection />
