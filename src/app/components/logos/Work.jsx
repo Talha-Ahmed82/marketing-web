@@ -30,7 +30,7 @@ export default function WorkSection() {
   ];
 
   return (
-    <motion.div className="w-full bg-white px-4 md:px-10">
+    <motion.div className="w-full bg-white py-16 px-4 md:px-10">
 
       {/* SLIDER */}
       <motion.div variants={fadeUp}

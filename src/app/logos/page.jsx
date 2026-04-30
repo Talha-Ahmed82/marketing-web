@@ -12,6 +12,10 @@ import BuildSection from "../components/logos/BuildSection";
 import Apologies from "../components/logos/Apologies";
 import PurposeSection from "../components/logos/PurposeSection";
 import WorkSection from "../components/logos/Work";
+import DirectionSection from "../components/logos/Direction";
+import Holds from "../components/logos/Holds";
+import TestimonialSection from "../components/TestimonialSection";
+import PricingSection from "../components/logos/Pricing";
 
 export default function About() {
   return (
@@ -22,10 +26,9 @@ export default function About() {
      <Apologies />
      <PurposeSection />
      <WorkSection />
-     <BrandsSection />
-     <BuiltSection />
-     <FAQSection />
-     <ProcessSection />
+     <Holds />
+     <TestimonialSection />
+     <PricingSection />
      <IndustryInsights />
      <ContactSection />
     </>
