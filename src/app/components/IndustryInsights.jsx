@@ -55,7 +55,7 @@ export default function IndustryInsights() {
         transition={{ delay: 0.2 }}
         className="max-w-[1400px] mx-auto mb-10 md:mb-14 px-4"
       >
-        <h2 className="text-center font-medium text-3xl md:text-6xl tracking-tight">
+        <h2 className="text-center font-medium text-4xl md:text-6xl tracking-tight">
           <span className="text-[#DE3B00]">Our </span>
           <span className="text-[#374550]">Industry </span>
           <span className="text-[#DE3B00]">Insights</span>

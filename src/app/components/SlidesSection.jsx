@@ -46,7 +46,7 @@ export default function WorkSection() {
             Case Studies
           </motion.div>
 
-          <h2  className="text-4xl md:text-6xl font-medium leading-tight text-gray-700">
+          <h2  className="text-4xl lg:text-6xl font-medium leading-tight text-gray-700">
             <span className="text-[#DE3B00]">Work</span> That
             <br />
             Actually <span className="text-[#DE3B00]">Delivers.</span>

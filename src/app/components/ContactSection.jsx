@@ -51,18 +51,18 @@ export default function ContactSection() {
             {/* Heading */}
             <h2 className="font-medium leading-[1.02] tracking-tight text-[52px] md:text-[76px] lg:text-7xl">
               <span className="text-[#DE3B00]">Let’s</span>{" "}
-              <span className="text-[#374550]">Build</span>
-              <br />
+              <span className="text-[#374550]">Build </span>
+              <br className="hidden lg:block" />
 
               <span className="text-[#374550]">Something</span>{" "}
-              <span className="text-[#DE3B00]">That</span>
-              <br />
+              <span className="text-[#DE3B00]">That </span>
+              <br className="hidden lg:block" />
 
               <span className="text-[#DE3B00]">Actually</span>{" "}
               <span className="text-[#DE3B00]">Matters</span>
             </h2>
 
-            <p className="mt-8 max-w-xl text-gray-700 text-base md:text-lg leading-relaxed">
+            <p className="mt-8 lg:max-w-xl text-gray-700 text-base md:text-lg leading-relaxed">
               Tell Us What You’re Working On, Rough Idea Or Fully Formed Vision.
               We’ll Cut Through The Noise, Challenge What’s Weak, And Help You
               Build Something That Stands Out For The Right Reasons.

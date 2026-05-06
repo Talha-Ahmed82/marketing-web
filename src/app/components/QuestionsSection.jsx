@@ -71,16 +71,16 @@ export default function QuestionsSection() {
           className="flex flex-col md:flex-row justify-between gap-8 mb-12"
         >
           {/* LEFT */}
-          <motion.div variants={fadeUp} transition={{ delay: 0.2 }}>
+          <motion.div className="md:w-[50%]" variants={fadeUp} transition={{ delay: 0.2 }}>
             <motion.div className="inline-flex items-center gap-2 px-4 py-1 border rounded-full text-sm text-gray-600 mb-4">
               <span className="w-2 h-2 bg-[#DE3B00] rounded-full"></span>
               Our Questions
             </motion.div>
 
-            <h2 className="text-4xl md:text-6xl font-medium leading-tight text-gray-700">
+            <h2 className="text-4xl lg:text-6xl font-medium leading-tight text-gray-700">
               <span className="text-[#DE3B00]">The</span> Questions
-              <br />
-              <span className="text-[#DE3B00]">Most</span> Brands{" "}
+              <br className="hidden xl:block" />
+              <span className="text-[#DE3B00]"> Most</span> Brands{" "}
               <span className="text-[#DE3B00]">Avoid</span>
             </h2>
           </motion.div>
@@ -89,7 +89,7 @@ export default function QuestionsSection() {
           <motion.div
             variants={fadeUp}
             transition={{ delay: 0.35 }}
-            className="max-w-md"
+            className="md:w-[50%] lg:max-w-md"
           >
             <p className="text-gray-800 text-sm md:text-base">
               We Don’t Jump Into Design. We Interrogate The Brand First, Because
@@ -108,7 +108,7 @@ export default function QuestionsSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid md:grid-cols-3 gap-6"
+          className="grid md:grid-cols-3 gap-16 md:gap-6"
         >
           {cards.map((card, i) => (
             <motion.div
@@ -137,7 +137,7 @@ export default function QuestionsSection() {
 
               {/* MAIN CARD */}
               <motion.div
-                className={`relative p-6 pt-10 rounded-2xl shadow-sm
+                className={`relative p-6 h-full lg:h-90 xl:h-full pt-10 rounded-2xl shadow-sm
                 ${
                   card.active
                     ? "bg-[#DE3B00] text-white"

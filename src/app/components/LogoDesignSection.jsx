@@ -153,13 +153,13 @@ export default function LogoDesignSection() {
         viewport={{ once: true, amount: 0.2 }} className="relative w-full max-w-6xl rounded-3xl bg-gradient-to-r from-[#e7c1b3] to-[#f2f2f2] p-6 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6">
         {/* LEFT CONTENT */}
         <motion.div  variants={fadeUp}
-          transition={{ delay: 0.2 }} className="flex-1 text-center md:text-left">
+          transition={{ delay: 0.2 }} className="flex-1 md:w-[50%] text-center md:text-left">
           <h2 className="text-3xl lg:text-5xl xl:text-6xl font-medium text-[#364153]">
             Logo{" "}
             <span className="text-[#DE3B00]">{slides[active].highlight}</span>
           </h2>
 
-          <p className="text-gray-800 sm:text-red-400 md:text-blue-600 lg:text-green-500 xl:text-white mt-4 text-sm md:text-base lg:max-w-md">
+          <p className="text-gray-800 mt-4 text-sm md:text-base lg:max-w-md">
             {slides[active].description}
           </p>
 
@@ -182,7 +182,7 @@ export default function LogoDesignSection() {
         <motion.div  initial={{opacity:0, scale:0.92}}
             whileInView={{opacity:1, scale:1}}
             viewport={{once:true}}
-            transition={{duration:1, delay:0.4}} className="flex-shrink-0 relative overflow-visible">
+            transition={{duration:1, delay:0.4}} className="flex-shrink-0 md:w-[50%] relative overflow-visible">
           <Image
             src="/cards-pic.png"
             alt="logo design mockup"

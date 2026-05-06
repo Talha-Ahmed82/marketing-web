@@ -78,7 +78,7 @@ export default function TestimonialSection() {
               Great Find, I’d Use Them!
             </h2>
 
-            <p className="mt-4 text-gray-300 text-sm md:text-base max-w-lg">
+            <p className="mt-4 text-gray-300 text-sm md:text-base md:max-w-lg">
               It was my first time using a digital agency for branding/marketing
               assistance. From start to end, Brooklyn Design was responsive,
               attentive, and on time. The final output exceeded our

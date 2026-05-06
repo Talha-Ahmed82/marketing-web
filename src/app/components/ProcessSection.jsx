@@ -54,7 +54,7 @@ export default function ProcessSection() {
       <motion.div variants={fadeUp}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }} className="max-w-6xl mx-auto grid md:grid-cols-2 items-start">
+        viewport={{ once: true, amount: 0.2 }} className="max-w-6xl mx-auto grid lg:grid-cols-2 items-start">
 
         {/* LEFT CONTENT */}
         <motion.div variants={fadeUp}
@@ -65,18 +65,18 @@ export default function ProcessSection() {
           </motion.div>
 
           <h2 className="text-4xl md:text-6xl font-medium leading-tight text-gray-700">
-            <span className="text-[#DE3B00]">A </span>Process <span className="text-[#DE3B00]">That</span>
-            <br />
+            <span className="text-[#DE3B00]">A </span>Process <span className="text-[#DE3B00]">That </span>
+            <br className="hidden lg:block" />
             <span className="text-[#DE3B00]">Actually</span> Works.
           </h2>
 
           <h3 className="mt-6 text-xl md:text-2xl text-gray-800">
             Clear Steps. No Confusion.
-            <br />
+            <br className="hidden lg:block" />
             No Wasted Time.
           </h3>
 
-          <p className="mt-4 text-gray-600 max-w-md text-sm md:text-base">
+          <p className="mt-4 text-gray-600 lg:max-w-md text-sm md:text-base">
             We Start By Getting Clear On Your Business, Your Goals, And Where
             Your Brand Stands Today. No Assumptions, Just Focused Insight To
             Define The Right Direction From The Start.
@@ -97,7 +97,7 @@ export default function ProcessSection() {
             viewport={{once:true}}
             transition={{duration:1, delay:0.4}}
               key={i}
-              className="relative p-6 rounded-2xl bg-[#F8F8F8] border border-gray-200 overflow-hidden"
+              className="relative mt-8 lg:mt-0 p-6 rounded-2xl bg-[#F8F8F8] border border-gray-200 overflow-hidden"
             >
               {/* LOW OPACITY BG IMAGE */}
               <Image
