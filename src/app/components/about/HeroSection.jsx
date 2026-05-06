@@ -192,7 +192,7 @@ export default function HeroSection() {
                 alt="BD"
                 width={300}
                 height={300}
-                className="w-[80%] mt-20 sm:mt-0 sm:w-[80%] md:w-[500px] lg:w-[500px] object-contain"
+                className="w-[100%] mt-20 sm:mt-0 sm:w-[80%] md:w-[500px] lg:w-[500px] object-contain"
               />
             </motion.div>
           </div>
